@@ -5,39 +5,120 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joel Inwood</title>
-    <style type="text/css">
+    <meta name="description" content="Joel Inwood — public relations and communications professional and writer working at the intersection of communications and technology.">
+    <style>
+        @font-face {
+            font-family: "Press Start 2P";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url("fonts/press-start-2p-latin.woff2") format("woff2");
+        }
+
+        @font-face {
+            font-family: "VT323";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url("fonts/vt323-latin.woff2") format("woff2");
+        }
+
+        :root {
+            --green: #3cc43c;
+            --green-dim: #86d986;
+            --green-dark: #135e13;
+            --fg: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
         body {
-            margin: 40px auto;
-            max-width: 650px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #333;
-            padding: 0 10px;
-            background-color: #f4f4f4; /* Added background color */
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7vh 22px;
+            background: #000;
+            color: var(--fg);
+            font-family: "VT323", ui-monospace, "Courier New", monospace;
+        }
+
+        .window {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            background: #000;
+            border: 4px solid var(--green);
+            border-radius: 0;
+            box-shadow:
+                inset 0 0 0 4px #000,
+                inset 0 0 0 8px var(--green);
+            padding: 38px 38px 50px;
+            font-size: 24px;
+            line-height: 1.5;
         }
 
         h1 {
-            text-align: center;
-            color: #0077cc; /* Added color for emphasis */
+            font-family: "Press Start 2P", monospace;
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--green);
+            text-shadow: 4px 4px 0 var(--green-dark);
+            margin: 0 0 18px;
         }
 
-        p {
-            margin-bottom: 20px; /* Added spacing between paragraphs */
+        .role {
+            color: var(--green-dim);
+            font-size: 19px;
+            margin: 0 0 28px;
+        }
+
+        p { margin: 0 0 18px; }
+
+        hr {
+            border: 0;
+            border-top: 4px solid var(--green);
+            margin: 28px 0 22px;
+        }
+
+        .link {
+            font-family: "Press Start 2P", monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
         }
 
         a {
-            color: #0077cc;
+            color: var(--green);
             text-decoration: none;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #000;
+            background: var(--green);
+        }
+
+        /* keep the pixel link from overflowing the frame on small screens */
+        @media (max-width: 480px) {
+            h1 { font-size: 18px; }
+            .link { font-size: 10px; }
         }
     </style>
 </head>
 
 <body>
-<h1>.</h1>    
+    <main class="window">
+        <h1>Joel Inwood</h1>
+        <p>
+            Joel Inwood is a web and communications professional
+            working at the intersection of communications and technology.
+        </p>
+
+        <hr>
+
+        <p class="link"><a href="https://www.linkedin.com/in/joel-inwood-18645512/">linkedin.com/in/joel-inwood</a></p>
+    </main>
 </body>
 
 </html>
